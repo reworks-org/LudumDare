@@ -6,6 +6,7 @@
 //  Copyright (c) 2015 reworks. All rights reserved.
 //
 
+#include <SDL2/SDL_events.h>
 
 #include "Game.hpp"
 
@@ -35,7 +36,20 @@ void Game::UnloadResources(re::World & world)
 
 void Game::Event(SDL_Event & e, re::World & world, GameStateManager * stateManager)
 {
+	while (SDL_PollEvent(&e) != 0)
+	{
+		if (e.type == SDL_MOUSEBUTTONDOWN) {
+			switch (e.button.button) {
+				case SDL_BUTTON_LEFT:
+					// shoot
+				break;
 
+				case SDL_BUTTON_RIGHT:
+					// jump
+					break;
+			}
+		}
+	}
 }
 
 void Game::Update(double dt, re::World & world, GameStateManager * stateManager)
