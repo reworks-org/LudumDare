@@ -1,0 +1,6 @@
+autotracker.py: https://github.com/wibblymat/ld24/blob/master/autotracker.py (Public Domain)
+VCR OSD MONO font: http://www.dafont.com/vcr-osd-mono.font (100% Free license)
+Tiled map editor: http://www.mapeditor.org/
+black.txt theme & textures from TGUI: https://tgui.eu
+
+map textures from: http://opengameart.org/content/classical-ruin-tiles
