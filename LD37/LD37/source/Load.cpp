@@ -13,7 +13,7 @@
 #include <re/systems/RenderSystem.hpp>
 #include <re/services/ServiceLocator.hpp>
 
-#include "gamesystems/MoveSystem.hpp"
+#include "systems/MoveSystem.hpp"
 
 #include "Load.hpp"
 #include "Menu.hpp"

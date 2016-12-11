@@ -40,12 +40,12 @@ void Game::LoadResources()
 	m_vfs = Locator::Get<VFS>();
 	m_config = Locator::Get<ConfigReader>();
 
+	m_world->Register("states/gamestate.lua");
+
 	m_world->Get<RenderSystem>()->AutoSubmit(m_world);
 	m_world->Get<MoveSystem>()->AutoSubmit(m_world);
 	m_world->Get<AudioSystem>()->AutoSubmit(m_world);
 	m_world->Get<PhysicsSystem>()->AutoSubmit(m_world);
-
-	m_world->Get<AudioSystem>()->GetMusic("ball.bg")->play();
 
 	if (m_doOnce)
 	{
@@ -55,14 +55,13 @@ void Game::LoadResources()
 	}
 
 	m_world->Get<PhysicsSystem>()->SubmitTiles(&m_map);
+	m_world->Get<AudioSystem>()->GetMusic("ball.bg")->play();
 }
 
 void Game::UnloadResources()
 {
 	m_gui.removeAllWidgets();
-		
-	m_world->Get<AudioSystem>()->GetMusic("ball.bg")->stop();
-
+	
 	m_world->Get<RenderSystem>()->Clean();
 	m_world->Get<MoveSystem>()->Clean();
 	m_world->Get<AudioSystem>()->Clean();

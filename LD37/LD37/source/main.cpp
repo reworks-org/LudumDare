@@ -18,7 +18,6 @@
 
 #include "systems/MoveSystem.hpp"
 #include "physics/B2DCallbacks.hpp"
-#include "components/LevelComponent.hpp"
 
 #include "Load.hpp"
 
@@ -79,9 +78,6 @@ public:
 
 		// set up collision listener
 		m_physicsManager.m_world.SetContactListener(&m_b2dcallbacks);
-
-		// register new components
-		m_world.RegisterComponent<LevelComponent>("LevelComponent");
 
 		// provide services
 		Locator::Provide<World>(&m_world);

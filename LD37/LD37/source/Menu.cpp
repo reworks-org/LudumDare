@@ -51,7 +51,7 @@ void Menu::LoadResources()
 	tgui::Button::Ptr button_highscore = tgui::loadButtonWithScript(m_theme, "ui/menu_highscore.lua");
 	tgui::Button::Ptr button_exit = tgui::loadButtonWithScript(m_theme, "ui/menu_exit.lua");
 	
-	button_new->connect("pressed", []() {});
+	button_new->connect("pressed", []() { Locator::Get<StateManager>()->ChangeState(Game::Inst()); });
 	button_highscore->connect("pressed", []() {});
 	button_exit->connect("pressed", []() { Locator::Get<Window>()->close(); });
 	
