@@ -115,6 +115,7 @@ void Game::Render()
 	m_window->clear(sf::Color::Black);
 
 	m_window->draw(m_map);
+	m_world->Get<RenderSystem>()->Render(m_window);
 	
 	m_window->display();
 }
