@@ -1,14 +1,4 @@
+#os stuff
 .DS_Store
 thumbs.db
-.thumbs.db
-
-# LD37 - One Room
-LD37/libs/
-LD37/.vs/
-LD37/*.sln
-LD37/*.VC.db
-LD37/LD37/*.vcxproj
-LD37/LD37/*.vcxproj.filters
-LD37/LD37/*.vcxproj.user
-LD37/LD37/bin/
-LD37/LD37/build/
+*.ini
